@@ -1,0 +1,35 @@
+﻿@model DishCreateViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h3 class="text-muted mt-2 mb-2">Create a Dish</h3>
+            <form method="post" asp-controller="Dish" asp-action="Create">
+                <input type="hidden" asp-for="MealId"/>
+                <div class="form-group">
+                    <label asp-for="DishName"></label>
+                    <input asp-for="DishName" class="form-control" placeholder="Enter your dish here" />
+                    <span asp-validation-for="DishName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DishesFor"></label>
+                    <input asp-for="DishesFor" class="form-control" placeholder="Dishes..."/>
+                    <span asp-validation-for="DishesFor" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success mr-2">Save</button>
+                    <a asp-controller="Planning" asp-action="Index" class="btn btn-info" >Back to Meal</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

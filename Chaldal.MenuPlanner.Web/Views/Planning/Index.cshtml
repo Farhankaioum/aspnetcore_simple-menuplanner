@@ -1,0 +1,45 @@
+﻿@model PlanningIndexModel
+
+@{
+    ViewData["Title"] = "Index page";
+}
+
+<div class="container">
+    @if (Model.Meals.Count <= 0)
+    {
+        <h2>You have no meals today</h2>
+        <button type="button" class="btn btn-success float-right">Create Meal</button>
+    }
+    <div class="row">
+        @foreach (var meal in Model.Meals)
+        {
+            <div class="col-md-4">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-header">@meal.Name</h2>
+                    </div>
+                    <div class="card-footer">
+                        <div class="btn-group">
+                            <a class="btn btn-sm btn-success" asp-controller="Dish" asp-action="Create" asp-route-id="@meal.Id"> Add Dish</a>
+                        </div>
+                    </div>
+                </div>
+                @if(meal.Dishes.Count > 0)
+                {
+                    <table class="table">
+                        
+                            @foreach (var dish in meal.Dishes)
+                            {
+                                <tr>
+                                    <td>@dish.DishName</td>
+                                </tr>
+                            }
+                        
+                    </table>
+                }
+            </div>
+        }
+
+    </div>
+</div>

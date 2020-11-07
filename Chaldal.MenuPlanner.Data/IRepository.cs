@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Text;
 
 namespace Chaldal.MenuPlanner.Data
 {
@@ -15,7 +14,7 @@ namespace Chaldal.MenuPlanner.Data
         void Remove(TEntity entityToDelete);
         void Edit(TEntity entityToUpdate);
         int GetCount(Expression<Func<TEntity, bool>> filter = null);
-        IList<TEntity> GetAll();
+        IList<TEntity> GetAll(string includeProperties = "");
         TEntity GetById(TKey id);
     }
 }

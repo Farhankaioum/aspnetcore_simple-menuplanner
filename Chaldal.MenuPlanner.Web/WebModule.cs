@@ -16,6 +16,7 @@ namespace Chaldal.MenuPlanner.Web
 
         protected override void Load(ContainerBuilder builder)
         {
+            builder.RegisterType<PlanningIndexModel>();
 
             base.Load(builder);
         }

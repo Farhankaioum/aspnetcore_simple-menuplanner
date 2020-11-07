@@ -20,9 +20,16 @@ namespace Chaldal.MenuPlanner.Data
             _dbSet = _dbContext.Set<TEntity>();
         }
 
-        public virtual IList<TEntity> GetAll()
+        public virtual IList<TEntity> GetAll(string includeProperties = "")
         {
             IQueryable<TEntity> query = _dbSet;
+
+            foreach (var includeProperty in includeProperties.Split(
+               new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                query = query.Include(includeProperty);
+            }
+
             return query.ToList();
         }
 
