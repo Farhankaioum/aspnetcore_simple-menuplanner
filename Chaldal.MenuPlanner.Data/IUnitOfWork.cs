@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Chaldal.MenuPlanner.Data
 {
-    public interface IEntity<T>
+    public interface IUnitOfWork : IDisposable
     {
-        T Id { get; set; }
+        void Save();
     }
 }
