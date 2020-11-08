@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Chaldal.MenuPlanner.Data\Chaldal.MenuPlanner.Data.csproj" />
+    <ProjectReference Include="..\MenuPlanner.Data\MenuPlanner.Data.csproj" />
   </ItemGroup>
 
 </Project>

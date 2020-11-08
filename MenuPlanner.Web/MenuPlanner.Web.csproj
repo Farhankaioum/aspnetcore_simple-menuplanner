@@ -1,8 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>aspnet-Chaldal.MenuPlanner.Web-C557337F-9610-48AF-8E7D-3BCCC1F70957</UserSecretsId>
+    <UserSecretsId>aspnet-MenuPlanner.Web-C557337F-9610-48AF-8E7D-3BCCC1F70957</UserSecretsId>
     <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
   </PropertyGroup>
 
@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Chaldal.MenuPlanner.Framework\Chaldal.MenuPlanner.Framework.csproj" />
+    <ProjectReference Include="..\MenuPlanner.Framework\MenuPlanner.Framework.csproj" />
   </ItemGroup>
 
 </Project>
